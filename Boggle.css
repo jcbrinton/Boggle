@@ -1,0 +1,22 @@
+/*cells*/
+.gameboard tr td{
+width:20px;
+height:20px;
+padding: 20px;
+margin: 10px;
+cursor:pointer;
+
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
+
+}
+
+
+ul, li{
+  list-style-type: none;
+}

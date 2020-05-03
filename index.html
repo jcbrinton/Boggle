@@ -1,0 +1,102 @@
+<html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="bootstrap.min.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" type="text/css" href="Boggle.css">
+<script type="text/javascript" src="Boggle.js"></script>
+<script type="text/javascript" src="dictionary.js"></script>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="bootstrap.min.js"></script>
+    
+</head>
+<body >
+
+	<div class="alert alert-info" onmouseup="checkWord()">
+ 	 	<h4>Boggle</h4>
+ 	 	<button id="startbutton" type="button" onclick='buildGame()'>Start Game</button>
+	</div>
+	<div id="input1"></div>
+	<div id="input" style="display:none;">
+    		<input id="name" type="text" placeholder="Type your name">
+    		<button  class="btn" onclick="submitScore();">Submit</button>
+	</div>
+	<div id="result" style="display:none;">
+  		<table class="table">
+   			<tr>
+				<td >Name
+				</td>
+				<td >Score
+				</td>
+			</tr>
+ 
+  			<td id="column1"></td>
+ 			<td id="column2"></td>
+  
+  		</table>
+	</div>
+
+	<div id="board" style="display:none;" onmouseup="checkWord()">
+		<div class="well well-small" id="worddisplay">
+		</div>
+
+	<div class="span5">
+
+     	<table class="gameboard" >
+     
+			<tr>
+				<td  id="row1col1" class="btn" onmousedown="openCell(this)" onmouseover="makeWord(this)" onmouseup="checkWord()"></td>
+				<td  id="row1col2" class="btn" onmousedown="openCell(this)" onmouseover="makeWord(this)" onmouseup="checkWord()"></td>
+				<td  id="row1col3" class="btn" onmousedown="openCell(this)" onmouseover="makeWord(this)" onmouseup="checkWord()"></td>
+				<td  id="row1col4" class="btn" onmousedown="openCell(this)" onmouseover="makeWord(this)" onmouseup="checkWord()"></td>
+			</tr>
+			<tr>
+				<td  id="row2col1" class="btn" onmousedown="openCell(this)" onmouseover="makeWord(this)" onmouseup="checkWord()"></td>
+				<td  id="row2col2" class="btn" onmousedown="openCell(this)" onmouseover="makeWord(this)" onmouseup="checkWord()"></td>
+				<td  id="row2col3" class="btn" onmousedown="openCell(this)" onmouseover="makeWord(this)" onmouseup="checkWord()"></td>
+				<td  id="row2col4" class="btn" onmousedown="openCell(this)" onmouseover="makeWord(this)" onmouseup="checkWord()"></td>
+			</tr>
+			<tr>
+				<td  id="row3col1" class="btn" onmousedown="openCell(this)" onmouseover="makeWord(this)" onmouseup="checkWord()"></td>
+				<td  id="row3col2" class="btn" onmousedown="openCell(this)" onmouseover="makeWord(this)" onmouseup="checkWord()"></td>
+				<td  id="row3col3" class="btn" onmousedown="openCell(this)" onmouseover="makeWord(this)" onmouseup="checkWord()"></td>
+				<td  id="row3col4" class="btn" onmousedown="openCell(this)" onmouseover="makeWord(this)" onmouseup="checkWord()"></td>
+			</tr>
+			<tr>
+				<td  id="row4col1" class="btn" onmousedown="openCell(this)" onmouseover="makeWord(this)" onmouseup="checkWord()"></td>
+				<td  id="row4col2" class="btn" onmousedown="openCell(this)" onmouseover="makeWord(this)" onmouseup="checkWord()"></td>
+				<td  id="row4col3" class="btn" onmousedown="openCell(this)" onmouseover="makeWord(this)" onmouseup="checkWord()"></td>
+				<td  id="row4col4" class="btn" onmousedown="openCell(this)" onmouseover="makeWord(this)" onmouseup="checkWord()"></td>
+			</tr>
+		</table>
+	</div>
+    	<div class="span1">
+    
+     		<span id="timer" class="badge badge-info" style="font-size:20px;">3:00</span>
+      
+   		</div>
+   
+
+    	<div class="span3">
+      
+			<table id="score" class="table">
+
+				<td id="wordlist">
+				</td>
+				<td id="wordscore">
+				</td>
+
+				<tr>
+					<td >Total:
+					</td>
+					<td id="totalscore">0
+					</td>
+				</tr>
+
+			</table>
+    	</div>
+    </div>
+    
+</body>
+</html>
